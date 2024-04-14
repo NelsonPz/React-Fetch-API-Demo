@@ -11,3 +11,70 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.infobox {
+  border: 1px solid #2f3031;
+  border-spacing: 3px;
+  background-color: #f8f9fa;
+  color: black;
+  margin: 0.5em 0 0.5em 1em;
+  padding: 0.2em;
+  float: right;
+  clear: right;
+  font-size: 88%;
+  line-height: 1.5em;
+  width: 22em
+}
+
+.infobox-header,.infobox-label,.infobox-above,.infobox-full-data,.infobox-data,.infobox-below,.infobox-subheader,.infobox-image,.infobox-navbar,.infobox th,.infobox td {
+  vertical-align: top
+}
+
+.infobox-label,.infobox-data,.infobox th,.infobox td {
+  text-align: left
+}
+
+.infobox .infobox-above,.infobox .infobox-title,.infobox caption {
+  font-size: 125%;
+  font-weight: bold;
+  text-align: center
+}
+
+.infobox-title,.infobox caption {
+  padding: 0.2em
+}
+
+.infobox .infobox-header,.infobox .infobox-subheader,.infobox .infobox-image,.infobox .infobox-full-data,.infobox .infobox-below {
+  text-align: center;
+  display: flex;
+}
+
+.infobox .infobox-navbar {
+  text-align: right
+}
+.countryflag .countryCoatOfArms 
+{
+  display: table;
+  width: 100%;
+
+}
+
+.infobox > * > tr > td,.infobox > * > tr > th {
+  padding: 2px 5px;
+  border-bottom: 1px solid rgb(144, 153, 170)
+}
+.infobox > * > .infobox-row > th 
+{
+  column-span: 2;
+  text-align: center;
+  border-bottom: 1px dotted rgb(144, 153, 170);
+
+}
+.infobox > * > .infobox-flag
+{
+  background-color: #aeb4b9;
+}
+
+.infobox a,.infobox > * > tr:last-child > th,.infobox > * > tr:last-child > td {
+  border: 0
+}

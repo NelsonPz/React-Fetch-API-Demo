@@ -1,38 +1,85 @@
-.App {
+.dropdownParent {
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex; /* Use flexbox */
+  justify-content: left; /* Distribute children with equal space between them */
+ /* Just for visualization */
+  min-width:fit-content;
+  width: 50em;
+  font-size: 1em;
+}
+.dropdownChild {
+ /* Each child takes up equal space */
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #ffffff;
+  border: 1px solid #999; /* Just for visualization */
+ /* Just for visualization */
+}
+
+.filterLabel {
+  margin-left: 0.5em;
+  font-size: 125%;
+}
+.countryInformationBanner
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: hidden;
+
+}
+.countryParentContainer 
+{
+  background-color: #4e3939;
+  display: grid;
+  gap: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: 1px solid #181717; /* Just for visualization */
+}
+
+.countryName
+{
+  background-color: rgb(161, 182, 201);
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pagination
+{
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Distribute children with equal space between them */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pagination > button
+{
+  margin-left: 3em;
+  margin-right: 3em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.countryContentContainer
+{
+  background-color: #2c300e;
+  display: block;
+  grid-column: 3;
+  grid-row: 2;
 }
 
-.App-link {
-  color: #61dafb;
+.countryImgContainer
+{
+  background-color: #91a010;
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  display: block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.countryflag
+{
+  width: 100;
+  margin: 10px;
 }
