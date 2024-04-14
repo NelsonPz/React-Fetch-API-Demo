@@ -1,6 +1,6 @@
 
 import './App.css';
-import DropdownExample from './components/countries';
+import DropdownExample from '../countries/countries';
 const App = () => {
   return (
 

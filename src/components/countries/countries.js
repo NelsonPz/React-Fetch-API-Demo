@@ -5,8 +5,6 @@ let option = '', region = '', country = '';
 const DropdownExample = () => {
   // Define state for the selected values and options of both dropdowns
   const [optionDropdownValue, setOptionDropdownValue] = useState('');
-  const [optionDropdownOptions, setOptionDropdownOptions] = useState([]);
-  const [loadingOptionDropdown, setLoadingOptionDropdown] = useState(false);
   const [showOptionDropdown, setShowOptionDropdown] = useState('');
 
   const [regionDropdownValue, setRegionDropdownValue] = useState('');
@@ -19,6 +17,7 @@ const DropdownExample = () => {
   const [loadingCountryDropdown, setLoadingCountryDropdown] = useState(false);
   const [showCountryDropdown, setShowCountryDropdown] = useState(false);
   const [countriesData, setCountriesData] = useState([]);
+  // eslint-disable-next-line
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -162,7 +161,7 @@ const DropdownExample = () => {
       }
     };
     fetchSecondDropdownOptions();
-  }, [regionDropdownValue]);
+  }, [regionDropdownValue,optionDropdownValue]);
 
   
   // Handle change in the first dropdown
@@ -203,7 +202,7 @@ const DropdownExample = () => {
         <div class="dropdownParent">
           <div class="dropdownChild" >
               <div class="selectLabel" htmlFor="optionDropdown">Options:</div>
-              <select id="optionDropdown" value={optionDropdownValue} onChange={handleOptionDropdownChange} disabled={loadingOptionDropdown}>
+              <select id="optionDropdown" value={optionDropdownValue} onChange={handleOptionDropdownChange}>
                   <option value="">Select an option</option>
                   <option key="all" value="all">Show All</option>
                   <option key="region" value="region">Region</option>
