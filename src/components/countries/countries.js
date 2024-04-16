@@ -101,8 +101,8 @@ const DropdownExample = () => {
                   break;
               }
               setRegionDropdownOptions(filterOptionList);
-              setShowOptionDropdown(optionDropdownValue.charAt(0).toUpperCase() + optionDropdownValue.slice(1));
               
+              setShowOptionDropdown(optionDropdownValue.charAt(0).toUpperCase() + optionDropdownValue.slice(1));            
             } else {
               console.error('Failed to fetch options for the first dropdown');
             }
@@ -111,6 +111,7 @@ const DropdownExample = () => {
           }
           setLoadingRegionDropdown(false);
         } else {
+          setShowOptionDropdown("N/A");
           setRegionDropdownOptions([]);
           setRegionDropdownValue('');
           setCountryDropdownOptions([]);
@@ -198,9 +199,8 @@ const DropdownExample = () => {
         <div class="countryInformationBanner">        
           <h1 >Banners of the world</h1>
         </div>
-        <div class = "filterLabel">Filters:</div>
         <div class="dropdownParent">
-          <div class="dropdownChild" >
+          <div class="dropdownChild" style={{marginRight: 0 + 'em'}}>
               <div class="selectLabel" htmlFor="optionDropdown">Options:</div>
               <select id="optionDropdown" value={optionDropdownValue} onChange={handleOptionDropdownChange}>
                   <option value="">Select an option</option>
@@ -209,7 +209,7 @@ const DropdownExample = () => {
                   <option key="languages" value="languages">Language</option>
               </select>
           </div>
-          <div class="dropdownChild" hidden={!showRegionDropdown}>
+          <div class="dropdownChild" disabled={!showRegionDropdown}>
                 <div class="selectLabel" htmlFor="firstDropdown">{showOptionDropdown}:</div>
                 <select id="firstDropdown" value={regionDropdownValue} onChange={handleRegionDropdownChange} disabled={loadingCountryDropdown}>
                     <option value="">Select an option</option>
@@ -222,7 +222,7 @@ const DropdownExample = () => {
                     )}
                 </select>
           </div>
-          <div class="dropdownChild" hidden={!showCountryDropdown}>   
+          <div class="dropdownChild" disabled={!showCountryDropdown} style={{marginLeft: 0 + 'em'}}>   
             <div class="selectLabel" htmlFor="secondDropdown">Countries:</div>
             <select id="secondDropdown" value={countryDropdownValue} onChange={handleCountryDropdownChange} disabled={loadingRegionDropdown}>
                 <option value="">Select an option</option>
@@ -238,9 +238,9 @@ const DropdownExample = () => {
         </div>
           {/* Pagination buttons */}
         <div class="pagination">
-            <button onClick={prevPage} disabled={currentPage === 1}>Previous</button>
-            {currentPage}/{Math.ceil(countriesData.length/itemsPerPage)}
-            <button onClick={nextPage} disabled={indexOfLastItem >= countriesData.length}>Next</button>
+            <button onClick={prevPage} disabled={currentPage === 1} style={{marginRight: 0 + 'em'}}>Previous</button>
+            <div class="paginationNumber" disabled> {currentPage}/{Math.ceil(countriesData.length/itemsPerPage)}</div>
+            <button onClick={nextPage} disabled={indexOfLastItem >= countriesData.length} style={{marginLeft: 0 + 'em'}} >Next</button>
         </div>
         
         <div id="queryResult" class = "countryInformationBanner">

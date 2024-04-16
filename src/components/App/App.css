@@ -1,26 +1,27 @@
+
+
 .dropdownParent {
-  margin-top: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 0 auto;
   display: flex; /* Use flexbox */
-  justify-content: left; /* Distribute children with equal space between them */
+  justify-content: center; /* Distribute children with equal space between them */
  /* Just for visualization */
   min-width:fit-content;
-  width: 50em;
   font-size: 1em;
 }
 .dropdownChild {
  /* Each child takes up equal space */
-  margin-left: 5px;
-  margin-right: 5px;
-  background-color: #ffffff;
-  border: 1px solid #999; /* Just for visualization */
  /* Just for visualization */
+
+ width: 30%;
+ max-width: 40%;
+}
+select{
+  width:100%;
+  height:30px;
 }
 
-.filterLabel {
-  margin-left: 0.5em;
-  font-size: 125%;
+.selectLabel {
+  font-size: 1.2em;
 }
 .countryInformationBanner
 {
@@ -56,10 +57,37 @@
   justify-content: center; /* Distribute children with equal space between them */
 }
 
-.pagination > button
-{
-  margin-left: 3em;
-  margin-right: 3em;
+.pagination > button {
+  display: inline-block;
+  margin: 0 auto;
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #5565aa; 
+  color: #fff; 
+  border: none;
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); 
+  font-size: 1.2em;
+}
+
+button:hover {
+  background-color: #993333; 
+  transform: scale(1.05); 
+}
+
+.pagination > .paginationNumber {
+
+  width: 10%;
+  text-align: center;
+  padding: 5px;
+  background-color: #8591ca; 
+  color: #fff; 
+  font-size: 1.2em;
+  border-radius: 5px; 
+
 }
 
 .countryContentContainer
