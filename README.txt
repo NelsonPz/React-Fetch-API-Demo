@@ -1,4 +1,6 @@
-# About
+#React-Fetch-API-Demo
+
+## About
 
 This project aims to demonstrate a client application that interacts with API resources. The chosen API for this project is the RESTcountries API. The application utilizes React libraries, Node.js as the runtime environment, and yarn as the package manager.
 
