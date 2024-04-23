@@ -1,25 +1,22 @@
 # About
 
-The purpose of this project is to showcase a client application that accesses API resources. The API chosen for these project is RESTcountries API.
-This application was built using the React libraries, Node.js as the runtime environment and yarn as the package manager.
+This project aims to demonstrate a client application that interacts with API resources. The chosen API for this project is the RESTcountries API. The application utilizes React libraries, Node.js as the runtime environment, and yarn as the package manager.
 
-Link to API's documentation
-https://restcountries.com/
-
+[RESTcountries API Documentation](https://restcountries.com/)
 
 ## Getting Started
 
-To run the this example, follow these steps:
-1. Extract content from PerezNelsonProjectBuild.zip
-2. Open folder using Visual Studio Code
-3. Run folder with Live Server extension
+To run this example, follow these steps:
+1. Extract content from `PerezNelsonProjectBuild.zip`.
+2. Open the folder using Visual Studio Code.
+3. Run the folder with the Live Server extension.
 
 ## Debugging
 
-To see project files, follow these steps:
-1. Extract content from PerezNelsonFinalProject.zip
-2. Open folder using Visual Studio Code
-3. See files in src directory
+To view project files, follow these steps:
+1. Extract content from `PerezNelsonFinalProject.zip`.
+2. Open the folder using Visual Studio Code.
+3. View files in the `src` directory.
 
 To modify the project, follow these steps:
 
@@ -28,7 +25,6 @@ To modify the project, follow these steps:
 3. Install dependencies by running `yarn install` or `npm install`.
 4. Start the development server by running `yarn start` or `npm start`.
 5. Open your web browser and visit `http://localhost:3000` to see the pagination example in action.
-
 
 ## Usage
 
@@ -43,5 +39,4 @@ The pagination component allows you to browse through a list of items fetched fr
 - useEffect: A React Hook for performing side effects in functional components.
 - JSX: A syntax extension for JavaScript used with React to describe what the UI should look like.
 
-Author: Nelson Perez
-
+**Author**: Nelson Perez
